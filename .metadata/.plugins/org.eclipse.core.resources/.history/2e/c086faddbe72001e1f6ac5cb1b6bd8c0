@@ -1,0 +1,8 @@
+package br.com.fiap.banco.model;
+
+public class Empresa {
+	private int codigo;
+	private String empresa;
+	private int numeroFunc;
+	
+}

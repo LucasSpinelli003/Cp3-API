@@ -1,0 +1,13 @@
+package br.com.fiap.banco.dao;
+
+import java.sql.Connection;
+
+public class EmpresaDao {
+		private Connection conn;
+		
+		public EmpresaDao(Connection conn) {
+			this.conn = conn;
+		}
+		
+}
+

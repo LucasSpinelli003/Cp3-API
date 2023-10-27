@@ -1,0 +1,15 @@
+package br.com.fiap.banco.resource;
+
+import java.sql.SQLException;
+import java.util.List;
+
+
+public class EmpresaResource {
+
+	
+}
+
+
+
+
+

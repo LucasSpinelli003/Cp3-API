@@ -1,0 +1,49 @@
+package br.com.fiap.banco.service;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.List;
+
+import br.com.fiap.banco.dao.EmpresaDao;
+import br.com.fiap.banco.exception.BadInfoException;
+import br.com.fiap.banco.exception.IdNotFoundException;
+import br.com.fiap.banco.factory.ConnectionFactory;
+import br.com.fiap.banco.model.Empresa;
+
+public class EmpresaService {
+	private EmpresaDao empresaDao;
+	
+	public EmpresaService() throws ClassNotFoundException, SQLException {
+		Connection conn = ConnectionFactory.getConnection();
+		empresaDao = new EmpresaDao(conn);
+	}
+	
+	public void cadastrar(Empresa empresa) throws ClassNotFoundException, SQLException, BadInfoException {
+		//Implementar algumas regras:
+		//Nome � obrigat�rio e n�o pode ter mais do que 50 caracteres
+		validar(empresa);
+		
+		
+		empresaDao.cadastrar(empresa);
+	}
+	
+	private void validar(Empresa empresa) throws BadInfoException {
+		if (empresa.getEmpresa() == null || empresa.getEmpresa().length() > 50) {
+			throw new BadInfoException("Nome invalido, nao pode ser nulo e no maximo 50 caracteres");
+		}
+	}
+	
+	//public void atualizar(Empresa empresa) throws ClassNotFoundException, SQLException, IdNotFoundException, BadInfoException {
+	//	validar(empresa);	
+	//	empresaDao.atualizar(empresa);
+	//}
+	
+	public void remover(int codigo) throws ClassNotFoundException, SQLException, IdNotFoundException {
+		empresaDao.remover(codigo);
+	}
+	
+	public List<Empresa> listar() throws ClassNotFoundException, SQLException{
+		return empresaDao.listar();
+	}
+	
+}

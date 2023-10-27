@@ -1,0 +1,48 @@
+package br.com.fiap.banco.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import br.com.fiap.banco.exception.IdNotFoundException;
+import br.com.fiap.banco.model.Empresa;
+
+public class EmpresaDao {
+		private Connection conn;
+		
+		public EmpresaDao(Connection conn) {
+			this.conn = conn;
+		}
+		
+		public Empresa pesquisar(int codigo) throws SQLException, IdNotFoundException {
+			PreparedStatement stm = conn.prepareStatement("select * from t_categoria where id = ?");
+			stm.setInt(1, codigo);
+			
+			ResultSet result = stm.executeQuery();
+			
+			if (!result.next()) {
+				throw new IdNotFoundException("Categoria n�o encontrada");
+			}
+			
+			int id = result.getInt("cd_empresa");
+			String nome_empresa = result.getString("nm_empresa");
+			int numeroFunc = result.getInt("nr_funcionario");
+			Empresa empresa = new Empresa(id, nome_empresa, numeroFunc);
+			
+			return empresa;
+		}
+		
+		public void cadastrar(Empresa empresa) throws SQLException {
+			PreparedStatement stm = conn.prepareStatement("insert into t_categoria "
+					+ "(id, nm_categoria, st_perecivel) values (?, ?, ?)");
+			
+			stm.setInt(1, empresa.getCodigo());
+			stm.setString(2, empresa.getEmpresa());
+			stm.setInt(3, empresa.getNumeroFunc());
+			
+			stm.executeUpdate();
+		}
+		
+}
+

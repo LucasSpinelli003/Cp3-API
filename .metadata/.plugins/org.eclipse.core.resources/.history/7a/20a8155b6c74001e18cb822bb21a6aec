@@ -1,0 +1,69 @@
+package br.com.fiap.banco.service;
+
+import java.sql.Connection;
+
+import br.com.fiap.banco.dao.EmpresaDao;
+import br.com.fiap.banco.factory.ConnectionFactory;
+
+public class EmpresaService {
+	private EmpresaDao empresaDao;
+	
+	public EmpresaDao() throws ClassNotFoundException, SQLException {
+		Connection conn = ConnectionFactory.getConnection();
+		empresaDao = new EmpresaDao(conn);
+	}
+	
+	public void cadastrar(Produto produto) throws ClassNotFoundException, SQLException, BadInfoException {
+		//Implementar algumas regras:
+		//Nome � obrigat�rio e n�o pode ter mais do que 50 caracteres
+		validar(produto);
+		
+		
+		produtoDao.cadastrar(produto);
+	}
+	
+	
+	public List<Produto> pesquisarNome(String nome) throws SQLException {
+		return produtoDao.pesquisaNome(nome);
+	}
+
+	private void validar(Produto produto) throws BadInfoException {
+		if (produto.getNome() == null || produto.getNome().length() > 50) {
+			throw new BadInfoException("Nome invalido, nao pode ser nulo e no maximo 50 caracteres");
+		}
+		//Estoque, Valor de Compra e Venda tem que ser maiores do que 0
+		if(produto.getValorCompra() < 0) {
+			throw new BadInfoException("Valor de compra tem que ser positivo");
+		}
+		if(produto.getValorVenda() < 0) {
+			throw new BadInfoException("Valor de venda tem que ser positivo");
+		}
+		if(produto.getEstoque() < 0) {
+			throw new BadInfoException("Valor do estoque tem que ser positivo");
+		}
+	}
+	
+	public void atualizar(Produto produto) throws ClassNotFoundException, SQLException, IdNotFoundException, BadInfoException {
+		validar(produto);
+		
+		produtoDao.atualizar(produto);
+	}
+	
+	public void remover(int codigo) throws ClassNotFoundException, SQLException, IdNotFoundException {
+		produtoDao.remover(codigo);
+	}
+	
+	public List<Produto> listar() throws ClassNotFoundException, SQLException{
+		return produtoDao.listar();
+	}
+	
+	public Produto pesquisar(int codigo) throws ClassNotFoundException, SQLException, IdNotFoundException{
+		Produto p = produtoDao.pesquisar(codigo);
+		//Recuperar a categoria do produto, se existir
+		if (p.getCategoria() != null) {
+			Categoria c = categoriaDao.pesquisar(p.getCategoria().getCodigo());
+			p.setCategoria(c);
+		}
+		return p;
+	}
+}

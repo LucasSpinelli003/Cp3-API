@@ -1,0 +1,5 @@
+create table tb_empresa (
+	cd_empresa int primary key NOT NULL,
+	nm_empresa varchar2(100) NOT NULL,
+ 	nr_funcionario int
+);

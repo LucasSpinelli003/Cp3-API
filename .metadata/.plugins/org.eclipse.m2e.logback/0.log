@@ -1,0 +1,183 @@
+2023-10-26 22:15:04,130 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-10-26 23:08:15,008 [Worker-25: reload maven project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for br.com.fiap:05-banco:jar:0.0.1-SNAPSHOT is missing, no dependency information available
+2023-10-26 23:08:15,622 [Worker-25: reload maven project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for br.com.fiap:05-banco:jar:0.0.1-SNAPSHOT is missing, no dependency information available
+2023-10-26 23:09:34,195 [Worker-26: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: 07-WebApi:07-WebApi:0.0.1-SNAPSHOT @ C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\pom.xml.
+2023-10-26 23:09:34,810 [Worker-26: Enabling Maven Dependency Management] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for br.com.fiap:05-banco:jar:0.0.1-SNAPSHOT is missing, no dependency information available
+2023-10-26 23:09:42,361 [Worker-19: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for br.com.fiap:05-banco:0.0.1-SNAPSHOT
+org.eclipse.core.runtime.CoreException: Could not resolve artifact br.com.fiap:05-banco:jar:sources:0.0.1-SNAPSHOT
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$6(MavenImpl.java:584)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:394)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:228)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:214)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:553)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:538)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:394)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:275)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:214)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2023-10-26 23:09:50,232 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:09:50,234 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\main\resources
+2023-10-26 23:09:50,239 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:09:50,295 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\test\resources
+2023-10-26 23:09:54,084 [Worker-26: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Apii/src/main/java
+2023-10-26 23:09:54,085 [Worker-26: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Apii/src/test/java
+2023-10-26 23:09:55,823 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:09:55,825 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\main\resources
+2023-10-26 23:09:55,828 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:09:55,830 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\test\resources
+2023-10-26 23:09:56,623 [Worker-23: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download javadoc for br.com.fiap:05-banco:0.0.1-SNAPSHOT
+org.eclipse.core.runtime.CoreException: Could not resolve artifact br.com.fiap:05-banco:jar:javadoc:0.0.1-SNAPSHOT
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$6(MavenImpl.java:584)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:394)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:228)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:214)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:553)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:538)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:394)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:275)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:214)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2023-10-26 23:09:58,695 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:09:58,696 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\main\resources
+2023-10-26 23:09:58,699 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:09:58,701 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\test\resources
+2023-10-26 23:09:58,889 [Worker-26: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-10-26 23:10:05,200 [Worker-26: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: 07-WebApi:07-WebApi:0.0.1-SNAPSHOT @ C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\pom.xml.
+2023-10-26 23:10:06,247 [Worker-26: Enabling Maven Dependency Management] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for br.com.fiap:05-banco:jar:0.0.1-SNAPSHOT is missing, no dependency information available
+2023-10-26 23:10:11,093 [Worker-31: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:10:11,094 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\main\resources
+2023-10-26 23:10:11,100 [Worker-31: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:10:11,103 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\test\resources
+2023-10-26 23:10:11,105 [Worker-31: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of Apii
+2023-10-26 23:10:11,106 [Worker-31: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for Apii
+2023-10-26 23:10:12,155 [Worker-26: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Apii/src/main/java
+2023-10-26 23:10:12,156 [Worker-26: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Apii/src/test/java
+2023-10-26 23:10:13,169 [Worker-26: Enabling Maven Dependency Management] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for Apii
+2023-10-26 23:10:13,318 [Worker-26: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 10,00 sec, update config takes 3,00 sec 
+2023-10-26 23:10:15,088 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:10:15,281 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\main\resources
+2023-10-26 23:10:15,289 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:10:15,291 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\test\resources
+2023-10-26 23:10:15,291 [Worker-29: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of Apii
+2023-10-26 23:10:15,291 [Worker-29: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for Apii
+2023-10-26 23:10:24,052 [Worker-29: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: 07-WebApi:07-WebApi:0.0.1-SNAPSHOT @ C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\pom.xml.
+2023-10-26 23:10:24,133 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for br.com.fiap:05-banco:jar:0.0.1-SNAPSHOT is missing, no dependency information available
+2023-10-26 23:10:25,198 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:10:25,200 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\main\resources
+2023-10-26 23:10:25,206 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:10:25,207 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\test\resources
+2023-10-26 23:10:25,211 [Worker-29: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of Apii
+2023-10-26 23:10:25,211 [Worker-29: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for Apii
+2023-10-26 23:10:40,443 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: 07-WebApi:07-WebApi:0.0.1-SNAPSHOT @ C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\pom.xml.
+2023-10-26 23:10:40,500 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for br.com.fiap:05-banco:jar:0.0.1-SNAPSHOT is missing, no dependency information available
+2023-10-26 23:10:40,986 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:10:40,987 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\main\resources
+2023-10-26 23:10:40,990 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:10:40,991 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\test\resources
+2023-10-26 23:10:40,992 [Worker-25: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of Apii
+2023-10-26 23:10:40,992 [Worker-25: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for Apii
+2023-10-26 23:10:58,315 [Worker-26: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-10-26 23:10:58,562 [Worker-26: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: 07-WebApi:07-WebApi:0.0.1-SNAPSHOT @ C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\pom.xml.
+2023-10-26 23:10:58,622 [Worker-26: Updating Maven Project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for br.com.fiap:05-banco:jar:0.0.1-SNAPSHOT is missing, no dependency information available
+2023-10-26 23:10:59,076 [Worker-26: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Apii/src/main/java
+2023-10-26 23:10:59,077 [Worker-26: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Apii/src/test/java
+2023-10-26 23:10:59,384 [Worker-26: Updating Maven Project] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for Apii
+2023-10-26 23:10:59,414 [Worker-26: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 0,00 sec, update config takes 0,00 sec 
+2023-10-26 23:10:59,555 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:10:59,557 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\main\resources
+2023-10-26 23:10:59,561 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:10:59,563 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\test\resources
+2023-10-26 23:10:59,563 [Worker-29: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of Apii
+2023-10-26 23:10:59,564 [Worker-29: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for Apii
+2023-10-26 23:11:11,905 [Worker-29: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: 07-WebApi:07-WebApi:0.0.1-SNAPSHOT @ C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\pom.xml.
+2023-10-26 23:11:12,805 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:11:12,806 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\main\resources
+2023-10-26 23:11:12,811 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:11:12,812 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\test\resources
+2023-10-26 23:11:12,813 [Worker-29: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of Apii
+2023-10-26 23:11:12,813 [Worker-29: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for Apii
+2023-10-26 23:11:32,958 [Worker-28: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-10-26 23:11:33,780 [Worker-28: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: 07-WebApi:07-WebApi:0.0.1-SNAPSHOT @ C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\pom.xml.
+2023-10-26 23:11:34,536 [Worker-28: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Apii/src/main/java
+2023-10-26 23:11:34,536 [Worker-28: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Apii/src/test/java
+2023-10-26 23:11:34,947 [Worker-28: Updating Maven Project] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for Apii
+2023-10-26 23:11:34,971 [Worker-28: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 1,00 sec, update config takes 0,00 sec 
+2023-10-26 23:11:35,220 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:11:35,222 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\main\resources
+2023-10-26 23:11:35,228 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:11:35,229 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\test\resources
+2023-10-26 23:11:35,229 [Worker-23: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of Apii
+2023-10-26 23:11:35,229 [Worker-23: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for Apii
+2023-10-26 23:11:57,435 [Worker-29: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: 07-WebApi:07-WebApi:0.0.1-SNAPSHOT @ C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\pom.xml.
+2023-10-26 23:11:57,509 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for br.com.fiap:05-banco:jar:0.0.1-SNAPSHOT is missing, no dependency information available
+2023-10-26 23:11:59,017 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:11:59,019 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\main\resources
+2023-10-26 23:11:59,023 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:11:59,024 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\test\resources
+2023-10-26 23:11:59,025 [Worker-29: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of Apii
+2023-10-26 23:11:59,025 [Worker-29: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for Apii
+2023-10-26 23:14:46,571 [Worker-28: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: 07-WebApi:07-WebApi:0.0.1-SNAPSHOT @ C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\pom.xml.
+2023-10-26 23:14:46,636 [Worker-28: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for br.com.fiap:Apii:jar:0.0.1-SNAPSHOT is missing, no dependency information available
+2023-10-26 23:14:48,139 [Worker-28: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:14:48,140 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\main\resources
+2023-10-26 23:14:48,143 [Worker-28: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:14:48,144 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\test\resources
+2023-10-26 23:14:48,144 [Worker-28: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of Apii
+2023-10-26 23:14:48,144 [Worker-28: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for Apii
+2023-10-26 23:14:48,640 [Worker-26: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for br.com.fiap:Apii:0.0.1-SNAPSHOT
+org.eclipse.core.runtime.CoreException: Could not resolve artifact br.com.fiap:Apii:jar:sources:0.0.1-SNAPSHOT
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$6(MavenImpl.java:584)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:394)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:228)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:214)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:553)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:538)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:394)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:275)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:214)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2023-10-26 23:15:13,654 [Worker-31: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: 07-WebApi:07-WebApi:0.0.1-SNAPSHOT @ C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\pom.xml.
+2023-10-26 23:15:14,284 [Worker-31: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:15:14,285 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\main\resources
+2023-10-26 23:15:14,289 [Worker-31: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:15:14,290 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\test\resources
+2023-10-26 23:15:14,290 [Worker-31: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of Apii
+2023-10-26 23:15:14,291 [Worker-31: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for Apii
+2023-10-26 23:16:07,951 [Worker-25: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-10-26 23:16:07,975 [Worker-25: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 0,00 sec, update config takes 0,00 sec 
+2023-10-26 23:16:13,232 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: 07-WebApi:07-WebApi:0.0.1-SNAPSHOT @ C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\pom.xml.
+2023-10-26 23:16:13,905 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:16:13,907 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\main\resources
+2023-10-26 23:16:13,910 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:16:13,912 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\test\resources
+2023-10-26 23:16:13,912 [Worker-25: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of Apii
+2023-10-26 23:16:13,913 [Worker-25: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for Apii
+2023-10-26 23:16:16,673 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:16:16,674 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\main\resources
+2023-10-26 23:16:16,677 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:16:16,678 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\test\resources
+2023-10-26 23:28:57,622 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:28:57,647 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\main\resources
+2023-10-26 23:28:57,651 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-10-26 23:28:57,686 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Beatriz Melo\Documents\faculdade\cp3-java\cp3-main\Apii\src\test\resources

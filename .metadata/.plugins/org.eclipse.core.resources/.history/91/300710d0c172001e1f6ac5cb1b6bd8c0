@@ -1,0 +1,49 @@
+package br.com.fiap.banco.resource;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import br.com.fiap.banco.dao.EmpresaDao;
+import br.com.fiap.banco.factory.ConnectionFactory;
+import br.com.fiap.banco.model.Empresa;
+
+public class EmpresaResource {
+
+	@Path("/categoria")
+	public class CategoriaResource {
+
+		private EmpresaDao dao;
+		
+		public CategoriaResource() throws ClassNotFoundException, SQLException {
+			Connection conn = ConnectionFactory.getConnection();
+			dao = new EmpresaDao(conn);
+		}
+		
+		@GET
+		@Path("/{id}")
+		@Produces(MediaType.APPLICATION_JSON)
+		public Response buscar(@PathParam("id") int codigo)
+													throws SQLException{
+			try {
+				return Response.ok(dao.pesquisar(codigo)).build();
+			} catch (IdNotFoundException e) {
+				return Response.status(Status.NOT_FOUND).build();
+			}
+		}
+		
+		@POST
+		@Consumes(MediaType.APPLICATION_JSON)
+		public Response cadastrar(Empresa categoria, @Context UriInfo uri) throws SQLException {
+			dao.cadastrar(categoria);
+			
+			UriBuilder url = uri.getAbsolutePathBuilder();
+			url.path(String.valueOf(categoria.getCodigo()));
+			
+			return Response.created(url.build()).build();
+		}
+		
+		
+		
+	}
+
+}

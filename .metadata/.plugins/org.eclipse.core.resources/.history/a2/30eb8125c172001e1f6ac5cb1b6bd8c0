@@ -1,0 +1,6 @@
+
+ackage br.com.fiap.banco.resource;
+
+public @interface Path {
+
+}
