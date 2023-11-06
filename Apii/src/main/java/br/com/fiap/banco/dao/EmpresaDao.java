@@ -4,8 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
-
 import br.com.fiap.banco.exception.IdNotFoundException;
 import br.com.fiap.banco.model.Empresa;
 
@@ -16,21 +16,18 @@ public class EmpresaDao {
 			this.conn = conn;
 		}
 		
-		public Empresa pesquisar(int codigo) throws SQLException, IdNotFoundException {
-			PreparedStatement stm = conn.prepareStatement("select * from t_categoria where id = ?");
-			stm.setInt(1, codigo);
+		public Empresa pesquisar(int id) throws ClassNotFoundException, SQLException, IdNotFoundException {
+			PreparedStatement stm = conn.prepareStatement("select * from" + " tb_empresa where cd_empresa = ?");
+			
+			stm.setInt(1, id);
 			
 			ResultSet result = stm.executeQuery();
-			
+		
 			if (!result.next()) {
-				throw new IdNotFoundException("Categoria n�o encontrada");
+				throw new IdNotFoundException("Empresa não encontrada");
 			}
-			
-			int id = result.getInt("cd_empresa");
-			String nome_empresa = result.getString("nm_empresa");
-			int numeroFunc = result.getInt("nr_funcionario");
-			Empresa empresa = new Empresa(id, nome_empresa, numeroFunc);
-			
+			Empresa empresa = parse(result);
+			stm.close();
 			return empresa;
 		}
 		
@@ -43,6 +40,7 @@ public class EmpresaDao {
 			stm.setInt(3, empresa.getNumeroFunc());
 			
 			stm.executeUpdate();
+			stm.close();
 		}
 	
 		public List<Empresa> listar() throws ClassNotFoundException, SQLException {
@@ -53,13 +51,15 @@ public class EmpresaDao {
 			List<Empresa> lista = new ArrayList<Empresa>();
 			
 			while (result.next()) {
-				Empresa prod = parse(result);
-				lista.add(prod);
+					
+					Empresa prod = parse(result);
+					lista.add(prod);	
+				
 			}
 			// Retornar a lista de produto
+			stm.close();
 			return lista;
 		}
-
 
 		//Método auxiliar que recebe o resultado do banco e retorna o objeto produto
 		private Empresa parse(ResultSet result) throws SQLException {
@@ -68,19 +68,10 @@ public class EmpresaDao {
 			String nome = result.getString("nm_empresa");
 			int estoque = result.getInt("nr_funcionario");
 			
-			//Recuperar a fk da categoria
-			int codigoEmpresa = result.getInt("cd_empresa");
 			
 			// Instanciar o produto com os valores
 			Empresa empresa = new Empresa(codigo, nome, estoque);
-			
-			//Instanciar uma categoria e setar o código da categoria
-			//Se existir a FK
-			if (codigoEmpresa != 0) {
-				Empresa emp = new Empresa(codigo, nome, estoque);
-				emp.setCodigo(codigoEmpresa);
-				emp.setCodigo(codigoEmpresa);
-			}
+
 			return empresa;
 		}
 
@@ -93,6 +84,7 @@ public class EmpresaDao {
 			stm.setInt(3, empresa.getCodigo());
 			// Executar a Query
 			int linha = stm.executeUpdate();
+			stm.close();
 			if (linha == 0)
 				throw new IdNotFoundException("Empresa não encontrada para atualizar");
 		}
@@ -105,6 +97,7 @@ public class EmpresaDao {
 			stm.setInt(1, id);
 			// Executar a Query
 			int linha = stm.executeUpdate();
+			stm.close();
 			if (linha == 0)
 				throw new IdNotFoundException("Empresa não encontrada para remoção");
 		}

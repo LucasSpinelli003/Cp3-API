@@ -23,6 +23,8 @@ import jakarta.ws.rs.core.Response.Status;
 import jakarta.ws.rs.core.UriBuilder;
 import jakarta.ws.rs.core.UriInfo;
 
+
+@Path("/empresa")
 public class EmpresaResource {
 	private EmpresaService service;
 	
@@ -30,14 +32,14 @@ public class EmpresaResource {
 		service = new EmpresaService();
 	}
 	
-	//GET http://localhost:8080/07-WebApi/api/produto (Listar todos os produtos)
+	//GET http://localhost:8080/07-WebApi/api/empresa
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Empresa> lista() throws ClassNotFoundException, SQLException {
 		return service.listar();
 	}
 	
-	//GET http://localhost:8080/07-WebApi/api/produto/1 (Pesquisar pelo Id)
+	//GET http://localhost:8080/07-WebApi/api/empresa/1 
 	@GET
 	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -50,13 +52,13 @@ public class EmpresaResource {
 		}
 	}
 	
-	//POST http://localhost:8080/07-WebApi/api/produto/ (Cadastrar um produto)
+	//POST http://localhost:8080/07-WebApi/api/empresa (Cadastrar um produto)
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response cadastrar(Empresa empresa, @Context UriInfo uri) throws ClassNotFoundException, SQLException {
 		try {
 			service.cadastrar(empresa);
-			//Recupera o path (URL atual(http://localhost:8080/07-WebApi/api/produto/))
+			//Recupera o path (URL atual(http://localhost:8080/07-WebApi/api/empresa/))
 			UriBuilder uriBuilder = uri.getAbsolutePathBuilder();
 			//Adiciona o id do produto que foi criado na URL
 			uriBuilder.path(String.valueOf(empresa.getCodigo()));
@@ -86,7 +88,7 @@ public class EmpresaResource {
 		}
 	}
 	
-	//DELETE http://localhost:8080/07-WebApi/api/produto/1 (Apagar um produto)
+	//DELETE http://localhost:8080/07-WebApi/api/1 (Apagar um produto)
 	@DELETE
 	@Path("/{id}")
 	public Response remover(@PathParam("id") int id) throws ClassNotFoundException, SQLException {

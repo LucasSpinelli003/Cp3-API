@@ -5,6 +5,8 @@ public class Empresa {
 	private String empresa;
 	private int numeroFunc;
 	
+	public Empresa() {}
+	
 	public Empresa(int codigo, String empresa, int numeroFunc) {
 		super();
 		this.codigo = codigo;

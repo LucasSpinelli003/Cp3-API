@@ -6,8 +6,11 @@ public class Vaga {
 	private String vaga;
 	private double salario;
 	private String data;
+	private Empresa empresa;
 	
-	public Vaga(int codigo, String nome, String vaga, double salario, String data) {
+	public Vaga() {}
+	
+	public Vaga(int codigo, String nome, String vaga, double salario, String data ) {
 		super();
 		this.codigo = codigo;
 		this.nome = nome;
@@ -51,8 +54,6 @@ public class Vaga {
 	public void setEmpresa(Empresa empresa) {
 		this.empresa = empresa;
 	}
-	private Empresa empresa;
-	
 	
 	
 }
